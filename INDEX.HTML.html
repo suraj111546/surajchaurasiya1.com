@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suraj - Birgunj Public School</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #fffbd5, #b20a2c);
+      font-family: 'Comic Sans MS', cursive;
+      overflow-x: hidden;
+      text-align: center;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 60px;
+      margin-top: 20px;
+      color: #fff;
+      text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080;
+      animation: bounce 2s infinite;
+    }
+
+    .school-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: yellow;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .photo-frame {
+      margin: 20px auto;
+      width: 320px;
+      border: 6px dashed #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      display: block;
+    }
+
+    .emoji {
+      font-size: 40px;
+      position: absolute;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .emoji:nth-child(even) {
+      animation-duration: 8s;
+    }
+
+    button {
+      padding: 15px 25px;
+      margin: 15px;
+      font-size: 18px;
+      background: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      color: #b20a2c;
+    }
+
+    button:hover {
+      background-color: #ff0080;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .mystery, .mim-box {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ffff00;
+      background-color: #222;
+      padding: 15px;
+      border-radius: 15px;
+      display: none;
+    }
+
+    .hover-secret {
+      margin-top: 20px;
+      color: transparent;
+      font-size: 20px;
+      transition: 0.5s;
+    }
+
+    .hover-secret:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Suraj Ke Masti World 🎉</h1>
+  <div class="school-name">Birgunj Public School 🏫</div>
+
+  <!-- First Photo -->
+  <div class="photo-frame">
+    <img src="489730169_1709567660439619_4800227669428938261_n.jpg" alt="Group Fun 1">
+  </div>
+
+  <!-- Second Photo -->
+  <div class="photo-frame">
+    <img src="494817121_1358309892062604_3333840265919337710_n.jpg" alt="Group Fun 2">
+  </div>
+
+  <button onclick="showJoke()">Friendship Joke 🚀</button>
+  <button onclick="showMystery()">Mistery Button 😲</button>
+  <button onclick="launchBombJoke()">Miya bhai Mystery 💣</button>
+
+  <div class="mystery" id="mysteryBox">Suraj bolta: "Bhai Sirious Mat Lihae😂, smile karde!" 😆😎</div>
+
+  <div class="mim-box" id="mimBox">Ee Miya ka dimaag matlab puzzle! Kabhi serious, kabhi blast! 🔥 Tum batao: Hero hai ya Villain? 😜</div>
+
+  <div class="hover-secret">Mouse idhar leke aa... kuch raaz chhupa ba! 😏</div>
+
+  <!-- Floating Emojis -->
+  <div class="emoji" style="left: 5%;">🤪</div>
+  <div class="emoji" style="left: 20%;">🔥</div>
+  <div class="emoji" style="left: 35%;">🤣</div>
+  <div class="emoji" style="left: 50%;">💣</div>
+  <div class="emoji" style="left: 65%;">😝</div>
+  <div class="emoji" style="left: 80%;">🙈</div>
+
+  <script>
+    function showJoke() {
+      const jokes = [
+        "Bhai-bhai ke dosti par doubt kare wala harami hoveला! 😤",
+        "Hamra dost log ke dimaag Google se fast बा, लेकिन sirf faltu idea में! 🤯",
+        "Ek sacha friend to Ohi ह, जे exam ke time notes leke bhag जाs! 😜",
+        "Dost: 'Bro tu sahi ba!' Reality: 'Har bar jhamela tu hi create करता!' 🤣",
+        "Mobile me battery 1% bacha होखे त call kare के नाम Suraj hi होखेला! 📱😂"
+      ];
+      alert(jokes[Math.floor(Math.random() * jokes.length)]);
+    }
+
+    function showMystery() {
+      document.getElementById("mysteryBox").style.display = "block";
+      new Audio("https://www.soundjay.com/human/sounds/laugh-01.mp3").play();
+    }
+
+    function launchBombJoke() {
+      document.getElementById("mimBox").style.display = "block";
+      new Audio("https://www.fesliyanstudios.com/play-mp3/387").play(); // Explosion sound
+    }
+  </script>
+
+</body>
+</html>
